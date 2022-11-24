@@ -1,0 +1,42 @@
+##################### Helper Script
+#
+#Solange Morales 
+#KULeuven_Nov_2022
+#Statistics and Data Science QASS 
+
+getwd()
+setwd("~/KULeuven/D4GC_2022")
+
+#Clear global enviroment
+rm(list=ls())
+
+## read csv
+data_set_A <- read.csv("//filename.csv")
+## read r file
+data_set_B <- readRDS("//filename.RDS")
+## read excel
+data_set_C <- read.xlsx("//filename.xlsx")
+## read sps
+data_set_D <- foreign::read.spss("///filename.sav",use.value.labels = F, to.data.frame = T)
+## read sas
+install.packages("haven")
+require(haven)
+data_set_E <- read.sas("PATH_TO_the file.SAS7BDAT")
+
+## save files
+# write
+write.csv()
+saveRDS ("filename.RDS")
+
+# tables
+table(data_set$CCC)
+# View
+View(data_set_A)
+#delete
+dataset$columnA <- NULL
+
+# convert in numeric BBB
+dataset$AAA$BBB <- as.numeric(dataset$AAA$BBB)
+
+
+
